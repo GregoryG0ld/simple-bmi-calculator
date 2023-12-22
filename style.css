@@ -9,8 +9,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	height: 100vh;
-	margin: 20px;
-	padding: 20px;
+	margin: 0px 20px;
 }
 
 .text-center {
@@ -32,4 +31,12 @@ input {
 
 button {
 	margin: 20px 5px;
+}
+
+.px-4 img {
+	max-width: 100px;
+	display: flex;
+	justify-items: center;
+	align-self: center;
+	margin-bottom: 15px;
 }

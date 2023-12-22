@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
    document.querySelector('.check').addEventListener('click', eventHandler);
 
    document.querySelector('.clear').addEventListener('click', function () {
-      document.querySelector('.height-input').value = '0.00';
+      document.querySelector('.height-input').value = '0';
       document.querySelector('.weight-input').value = '0';
       document.querySelector('body').style.backgroundColor = 'white';
       displayMessage('Start Calculating!');

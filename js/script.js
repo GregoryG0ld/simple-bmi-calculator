@@ -1,21 +1,17 @@
-console.log("Hello");
-
-// How to determine which number is in input field?
-
 const displayMessage = function (message) {
    document.querySelector('.text-message').textContent = message;
 };
 
 const eventHandler = function () {
-   const heightNum = Number(document.querySelector('.height-input').value);
-
+   const heightInCentimeters = Number(
+      document.querySelector('.height-input').value
+   );
    const weightNum = Number(document.querySelector('.weight-input').value);
 
-   if (!heightNum || !weightNum) {
+   if (!heightInCentimeters || !weightNum) {
       displayMessage('Enter both your Height and your Weight!');
    } else {
-
-      const bmiIndex = weightNum / Math.pow(heightNum, 2);
+      const bmiIndex = weightNum / Math.pow(heightInCentimeters / 100, 2);
       console.log(bmiIndex);
 
       if (bmiIndex <= 18.5) {
@@ -31,6 +27,7 @@ const eventHandler = function () {
          document.querySelector('body').style.backgroundColor = 'red';
          displayMessage('Sorry but your BMI is above normal' + ' ' + bmiIndex.toFixed(2));
       }
+      showClearButton();
    }
 };
 
@@ -41,6 +38,7 @@ document.querySelector('.clear').addEventListener('click', function () {
    document.querySelector('.weight-input').value = '0';
    document.querySelector('body').style.backgroundColor = 'white';
    displayMessage('Start Calculating!');
+   document.querySelector('.clear').style.display = 'none';
 
 });
 

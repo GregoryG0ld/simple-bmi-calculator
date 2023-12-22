@@ -36,12 +36,19 @@ label {
 }
 
 input {
-	height: 35px;
+
+	height: 84px;
 	padding: 10px;
 	margin: 5px 0;
 	box-sizing: border-box;
 	border: 1px solid #ccc;
 	border-radius: 5px;
+	text-align: center;
+	font-size: 36px;
+	width: 30%;
+	overflow: hidden;
+	-moz-appearance: textfield;
+
 }
 
 button {

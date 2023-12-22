@@ -2,6 +2,10 @@ const displayMessage = function (message) {
    document.querySelector('.text-message').textContent = message;
 };
 
+const showClearButton = function () {
+   document.querySelector('.clear').style.display = 'block';
+};
+
 const eventHandler = function () {
    const heightInCentimeters = Number(
       document.querySelector('.height-input').value
@@ -19,13 +23,17 @@ const eventHandler = function () {
          displayMessage('Your BMI is underweight ' + ' ' + bmiIndex.toFixed(2));
       } else if (bmiIndex >= 18.5 && bmiIndex <= 24.9) {
          document.querySelector('body').style.backgroundColor = 'green';
-         displayMessage('Congratulations your BMI is normal' + ' ' + bmiIndex.toFixed(2));
+         displayMessage(
+            'Congratulations your BMI is normal' + ' ' + bmiIndex.toFixed(2)
+         );
       } else if (bmiIndex >= 25 && bmiIndex <= 29.9) {
          document.querySelector('body').style.backgroundColor = 'orange';
          displayMessage('Your BMI is overweight ' + ' ' + bmiIndex.toFixed(2));
       } else {
          document.querySelector('body').style.backgroundColor = 'red';
-         displayMessage('Sorry but your BMI is above normal' + ' ' + bmiIndex.toFixed(2));
+         displayMessage(
+            'Sorry but your BMI is above normal' + ' ' + bmiIndex.toFixed(2)
+         );
       }
       showClearButton();
    }
@@ -39,9 +47,4 @@ document.querySelector('.clear').addEventListener('click', function () {
    document.querySelector('body').style.backgroundColor = 'white';
    displayMessage('Start Calculating!');
    document.querySelector('.clear').style.display = 'none';
-
 });
-
-// const heightNum = Number(document.querySelector('.height-input').value)
-
-//console.log(heightNum);   

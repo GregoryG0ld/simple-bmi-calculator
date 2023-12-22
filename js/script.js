@@ -1,9 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
-   // Assuming lang_en and lang_lt are global variables
-   let lang = lang_en; // Set the default language to English
+
+   let lang = lang_en;
 
    function updateContent() {
-      // Example of updating content based on language
       document.querySelector('.display-5').textContent = lang.title;
       document.querySelector('.lead').textContent = lang.description;
       document.querySelector('label[for="height"]').textContent = lang.heightLabel;
@@ -13,12 +12,10 @@ document.addEventListener('DOMContentLoaded', function () {
       document.querySelector('.text-message').textContent = lang.startCalculating;
    }
 
-   // Initial content update
    updateContent();
 
-   // Function to set language
    window.setLanguage = function (language) {
-      lang = language === 'en' ? lang_en : language === 'lt' ? lang_lt : lang_en; // Default to English if language is not recognized
+      lang = language === 'en' ? lang_en : language === 'lt' ? lang_lt : lang_en;
       updateContent();
    };
 

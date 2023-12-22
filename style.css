@@ -40,3 +40,7 @@ button {
 	align-self: center;
 	margin-bottom: 15px;
 }
+
+.btn-outline-secondary {
+	display: none
+}

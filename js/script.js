@@ -6,6 +6,10 @@ const displayMessage = function (message) {
    document.querySelector('.text-message').textContent = message;
 };
 
+const showClearButton = function () {
+	document.querySelector('.clear').style.display = 'block';
+};
+
 const eventHandler = function () {
    const heightNum = Number(document.querySelector('.height-input').value);
 
@@ -31,6 +35,7 @@ const eventHandler = function () {
          document.querySelector('body').style.backgroundColor = 'red';
          displayMessage('Sorry but your BMI is above normal' + ' ' + bmiIndex.toFixed(2));
       }
+      		showClearButton();
    }
 };
 
@@ -41,6 +46,7 @@ document.querySelector('.clear').addEventListener('click', function () {
    document.querySelector('.weight-input').value = '0';
    document.querySelector('body').style.backgroundColor = 'white';
    displayMessage('Start Calculating!');
+   	document.querySelector('.clear').style.display = 'none';
 
 });
 

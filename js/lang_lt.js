@@ -1,9 +1,14 @@
 const lang_lt = {
    title: 'Kūno masės indeksas',
    description: 'Kūno masės indekso (KMI) skaičiuoklė gali būti naudojama KMI reikšmei apskaičiuoti ir atitinkamai svorio būsenai nustatyti.',
-   heightLabel: 'Įveskite savo aukštį metrais',
+   heightLabel: 'Įveskite savo aukštį centimetrais',
    weightLabel: 'Įveskite savo svorį kg',
-   calculateBtn: 'Calculate',
-   clearBtn: 'Apskaičiuoti',
+   calculateBtn: 'Apskaičiuoti',
+   clearBtn: 'Išvalyti',
    startCalculating: 'Pradėkite skaičiuoti!',
+   enterBothValues: 'Įveskite tiek savo ūgį, tiek svorį!',
+   underweightMessage: 'Jūsų KMI yra mažesnis nei vidutinis ',
+   normalMessage: 'Sveikiname, jūsų KMI yra normalus ',
+   overweightMessage: 'Jūsų KMI yra didesnis nei vidutinis ',
+   aboveNormalMessage: 'Atsiprašome, bet jūsų KMI yra didesnis už normalų ',
 };
